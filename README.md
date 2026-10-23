@@ -10,7 +10,7 @@ A Streamlit deployment interface for a Teachable Machine audio-classification mo
 
 ## 🌐 Live Demo
 
-**Live app:** https://computer-vision-pipeline.streamlit.app/
+**Live app:** https://home-safety-detection.streamlit.app/
 
 ## 🧠 Model files
 
@@ -27,8 +27,8 @@ Keep these files together in `static/models/home_safety_audio/`:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/PareeSojitra0803/Computer_Vision_Pipeline_WebApp.git
-   cd Computer_Vision_Pipeline_WebApp
+   git clone https://github.com/PareeSojitra0803/Home_Safety_Detection_WebApp.git
+   cd Home_Safety_Detection_WebApp
    ```
 
 2. (Optional) Create a virtual environment:
@@ -63,7 +63,7 @@ Prediction quality depends on microphone quality, background conditions, and tra
 ## 📁 Repository structure
 
 ```text
-Computer_Vision_Pipeline_WebApp/
+Home_Safety_Detection_WebApp/
 ├── .streamlit/
 │   └── config.toml
 ├── static/
