@@ -1,70 +1,99 @@
-# Computer Vision Pipeline WebApp
+# 🎙️ Home Safety Sound Detector — Web App
 
-Streamlit deployment app for the **Home Safety Sound Detector**, using a Teachable Machine audio model in the browser through TensorFlow.js.
+A Streamlit deployment interface for a Teachable Machine audio-classification model. It detects five audio classes:
 
-## Classes
-- Alarm
-- Background Noise
-- Door Knock
-- Glass Break
-- Siren
+- **Alarm**
+- **Background Noise**
+- **Door Knock**
+- **Glass Break**
+- **Siren**
 
-## Required files
+## 🌐 Live Demo
 
-Copy `model.json`, `metadata.json`, and `weights.bin` from your main project's `data/models/home_safety_audio/` folder into this repository:
+**Live app:** https://computer-vision-pipeline.streamlit.app/
+
+## 🧠 Model files
+
+This model was trained using [Google Teachable Machine](https://teachablemachine.withgoogle.com/) and uses the TensorFlow.js Speech Commands format. It is **not** a Keras `.h5` model and should not be loaded using `keras.load_model()`.
+
+Keep these files together in `static/models/home_safety_audio/`:
+
+- `model.json`
+- `metadata.json`
+- `weights.bin`
+
+## 🚀 Run locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/PareeSojitra0803/Computer_Vision_Pipeline_WebApp.git
+   cd Computer_Vision_Pipeline_WebApp
+   ```
+
+2. (Optional) Create a virtual environment:
+
+   **Windows PowerShell**
+   ```powershell
+   py -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the app:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+## 🎧 Using the detector
+
+1. Open the app in a modern browser.
+2. Click **Start listening** and allow microphone access.
+3. Keep the page open while audio is classified.
+4. Click **Stop** to finish.
+
+Prediction quality depends on microphone quality, background conditions, and training examples. This is a demonstration project, not a certified emergency-monitoring system.
+
+## 📁 Repository structure
 
 ```text
 Computer_Vision_Pipeline_WebApp/
-├── app.py
-├── requirements.txt
-├── README.md
 ├── .streamlit/
 │   └── config.toml
-└── static/
-    └── models/
-        └── home_safety_audio/
-            ├── model.json
-            ├── metadata.json
-            └── weights.bin
+├── static/
+│   └── models/
+│       └── home_safety_audio/
+│           ├── model.json
+│           ├── metadata.json
+│           └── weights.bin
+├── app.py
+├── requirements.txt
+└── README.md
 ```
 
-Keep the three model filenames unchanged.
+## 🛠️ Technologies
 
-## Install and run
+- Python
+- Streamlit
+- TensorFlow.js
+- TensorFlow.js Speech Commands
+- Teachable Machine
 
-Python 3.11 is recommended for consistency.
+## 🔗 Main project
 
-```powershell
-py -3.11 -m pip install -r requirements.txt
-py -3.11 -m streamlit run app.py
-```
+The notebooks, experiments, and standalone HTML demo are maintained in the main repository:
 
-Open the local URL printed in the terminal (usually `http://localhost:8501`), click **Start listening**, and allow microphone access.
+[Computer_Vision_Pipeline_Deep_Learning](https://github.com/PareeSojitra0803/Computer_Vision_Pipeline_Deep_Learning)
 
-## Static file configuration
+## 👩‍💻 Author
 
-Create `.streamlit/config.toml` with:
+**Paree G. Sojitra**
 
-```toml
-[server]
-enableStaticServing = true
-```
-
-This enables the app to serve model files from `static/`.
-
-## Deploy to Streamlit Community Cloud
-
-1. Push `app.py`, `requirements.txt`, `README.md`, `.streamlit/config.toml`, and `static/` to GitHub.
-2. Create an app in Streamlit Community Cloud from the repository.
-3. Set the main file path to `app.py`, then deploy.
-4. Open the HTTPS URL and allow microphone access.
-
-The app loads TensorFlow.js and the Speech Commands library from public CDNs, so the browser needs internet access.
-
-## Troubleshooting
-- **Model files missing:** confirm all three files are in `static/models/home_safety_audio/`.
-- **Model fails to load:** ensure `model.json` points to the expected weights file and the files were copied together.
-- **Microphone blocked:** allow microphone access and reload. Deployed apps require HTTPS.
-- **Low confidence:** noise, microphone quality, and training sample variety affect results.
-
-Image and pose detection can be added to this app later when those pipelines are ready.
+- GitHub: https://github.com/PareeSojitra0803
+- LinkedIn: https://www.linkedin.com/in/pareesojitra/
