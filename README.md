@@ -87,9 +87,9 @@ Home_Safety_Detection_WebApp/
 
 ## 🔗 Main project
 
-The notebooks, experiments, and standalone HTML demo are maintained in the main repository:
+The image classification project is maintained in the main repository:
 
-[Computer_Vision_Pipeline_Deep_Learning](https://github.com/PareeSojitra0803/Computer_Vision_Pipeline_Deep_Learning)
+[Smart_Prediction_Suite_Using_CNN](https://github.com/PareeSojitra0803/Smart_Prediction_Suite_Using_CNN)
 
 ## 👩‍💻 Author
 
