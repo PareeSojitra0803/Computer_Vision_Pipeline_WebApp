@@ -40,8 +40,8 @@ static/
 """)
     st.stop()
 
-model_url = "https://computer-vision-pipeline.streamlit.app/app/static/models/home_safety_audio/model.json"
-metadata_url = "https://computer-vision-pipeline.streamlit.app/app/static/models/home_safety_audio/metadata.json"
+model_url = "https://raw.githubusercontent.com/PareeSojitra0803/Computer_Vision_Pipeline_WebApp/refs/heads/main/static/models/home_safety_audio/model.json"
+metadata_url = "https://raw.githubusercontent.com/PareeSojitra0803/Computer_Vision_Pipeline_WebApp/refs/heads/main/static/models/home_safety_audio/metadata.json"
 
 html = r"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
